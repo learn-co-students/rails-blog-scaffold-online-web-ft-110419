@@ -17,13 +17,18 @@ require 'rails_helper'
 # is no simpler way to get a handle on the object needed for the example.
 # Message expectations are only used when there is no simpler way to specify
 # that an instance is receiving a specific message.
+#
+# Also compared to earlier versions of this generator, there are no longer any
+# expectations of assigns and templates rendered. These features have been
+# removed from Rails core in Rails 5, but can be added back in via the
+# `rails-controller-testing` gem.
 
-RSpec.describe PostsController, :type => :controller do
+RSpec.describe PostsController, type: :controller do
 
   # This should return the minimal set of attributes required to create a valid
   # Post. As you add validations to Post, be sure to
   # adjust the attributes here as well.
-  let(:valid_attributes) {
+ let(:valid_attributes) {
     {title: "My String", description: "My desc"}
   }
 
